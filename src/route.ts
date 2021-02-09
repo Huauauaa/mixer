@@ -1,6 +1,7 @@
 import Home from './views/Home';
 import Tool from './views/Tool';
 import Timestamp from './components/Timestamp';
+import NameFormat from './components/NameFormat';
 
 const routers = [
   {
@@ -22,6 +23,12 @@ const routers = [
     name: 'Timestamp',
     label: '时间戳',
     component: Timestamp,
+  },
+  {
+    path: '/tool/name-format',
+    name: 'NameFormat',
+    label: '命名格式化',
+    component: NameFormat,
   },
 ];
 
