@@ -2,6 +2,7 @@ import Home from './views/Home';
 import Tool from './views/Tool';
 import Timestamp from './components/Timestamp';
 import NameFormat from './components/NameFormat';
+import JSONFormat from './components/JSONFormat';
 
 const routers = [
   {
@@ -29,6 +30,12 @@ const routers = [
     name: 'NameFormat',
     label: '命名格式化',
     component: NameFormat,
+  },
+  {
+    path: '/tool/json-format',
+    name: 'JSONFormat',
+    label: 'JSON格式化',
+    component: JSONFormat,
   },
 ];
 
