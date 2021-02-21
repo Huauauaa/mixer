@@ -10,7 +10,6 @@ type FormatType = {
 };
 
 function NameFormat() {
-  const [input, setInput] = useState('');
   const [data, setData]: [
     FormatType[],
     Dispatch<SetStateAction<FormatType[]>>,
@@ -18,7 +17,6 @@ function NameFormat() {
 
   const onInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
-    setInput(value);
     setData([
       {
         type: 'camelCase',
@@ -57,23 +55,17 @@ function NameFormat() {
 
   return (
     <div className="name-format">
-      <Input
-        value={input}
-        onChange={onInputChange}
-        placeholder="请输入"
-      ></Input>
-      {data.length ? (
-        <List
-          bordered
-          dataSource={data}
-          renderItem={(item) => (
-            <List.Item style={{ display: 'flex' }}>
-              {item.type}: {item.text}
-              <CopyButton text={item.text}></CopyButton>
-            </List.Item>
-          )}
-        />
-      ) : null}
+      <Input onChange={onInputChange} placeholder="请输入"></Input>
+      <List
+        bordered
+        dataSource={data}
+        renderItem={(item) => (
+          <List.Item style={{ display: 'flex' }}>
+            {item.type}: {item.text}
+            <CopyButton text={item.text}></CopyButton>
+          </List.Item>
+        )}
+      />
     </div>
   );
 }
