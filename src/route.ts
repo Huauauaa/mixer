@@ -1,8 +1,10 @@
 import Home from './views/Home';
 import Tool from './views/Tool';
+import MDN from './views/MDN';
 import Timestamp from './components/Timestamp';
 import NameFormat from './components/NameFormat';
 import JSONFormat from './components/JSONFormat';
+import IntlPanel from './components/IntlPanel';
 
 const routers = [
   {
@@ -36,6 +38,19 @@ const routers = [
     name: 'JSONFormat',
     label: 'JSON格式化',
     component: JSONFormat,
+  },
+  {
+    path: '/MDN',
+    name: 'MDN',
+    type: 'menu',
+    label: 'MDN',
+    component: MDN,
+  },
+  {
+    path: '/MDN/Intl',
+    name: 'Intl',
+    label: 'Intl',
+    component: IntlPanel,
   },
 ];
 
