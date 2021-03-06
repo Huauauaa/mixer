@@ -1,9 +1,9 @@
 import Clipboard from 'clipboard';
 import React from 'react';
 import { CopyOutlined } from '@ant-design/icons';
-import { message } from 'antd';
+import { Button, message } from 'antd';
 
-function CopyButton({ text }: { text: string }) {
+function CopyButton({ text, children }: { text: string; children?: string }) {
   const copy = () => {
     const clipboard = new Clipboard('.copy', {
       text: () => {
@@ -19,7 +19,11 @@ function CopyButton({ text }: { text: string }) {
       clipboard.destroy();
     });
   };
-  return <CopyOutlined className="copy" onClick={copy} />;
+  return (
+    <Button icon={<CopyOutlined />} className="copy" onClick={copy}>
+      {children}
+    </Button>
+  );
 }
 
 export default CopyButton;
