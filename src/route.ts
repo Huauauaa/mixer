@@ -1,10 +1,12 @@
 import Home from './views/Home';
 import Tool from './views/Tool';
 import MDN from './views/MDN';
+import Gist from './views/Gist';
 import Timestamp from './components/Timestamp';
 import NameFormat from './components/NameFormat';
 import JSONFormat from './components/JSONFormat';
 import IntlPanel from './components/IntlPanel';
+import GitGist from './components/GItGist';
 
 const routers = [
   {
@@ -51,6 +53,19 @@ const routers = [
     name: 'Intl',
     label: 'Intl',
     component: IntlPanel,
+  },
+  {
+    path: '/gist',
+    name: 'Gist',
+    type: 'menu',
+    label: 'Gist',
+    component: Gist,
+  },
+  {
+    path: '/gist/git',
+    name: 'Git',
+    label: 'Git',
+    component: GitGist,
   },
 ];
 
