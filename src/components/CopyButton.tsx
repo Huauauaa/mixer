@@ -1,7 +1,7 @@
 import Clipboard from 'clipboard';
 import React from 'react';
 import { CopyOutlined } from '@ant-design/icons';
-import { Button, message } from 'antd';
+import { Button, message, Tooltip } from 'antd';
 
 function CopyButton({ text, children }: { text: string; children?: string }) {
   const copy = () => {
@@ -20,9 +20,11 @@ function CopyButton({ text, children }: { text: string; children?: string }) {
     });
   };
   return (
-    <Button icon={<CopyOutlined />} className="copy" onClick={copy}>
-      {children}
-    </Button>
+    <Tooltip title="复制">
+      <Button icon={<CopyOutlined />} className="copy" onClick={copy}>
+        {children}
+      </Button>
+    </Tooltip>
   );
 }
 
