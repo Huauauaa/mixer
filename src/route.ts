@@ -7,6 +7,7 @@ import NameFormat from './components/NameFormat';
 import JSONFormat from './components/JSONFormat';
 import IntlPanel from './components/IntlPanel';
 import GitGist from './components/GItGist';
+import Symbol from './components/Symbol';
 
 const routers = [
   {
@@ -40,6 +41,12 @@ const routers = [
     name: 'JSONFormat',
     label: 'JSON格式化',
     component: JSONFormat,
+  },
+  {
+    path: '/tool/symbol',
+    name: 'Symbol',
+    label: '一些符号',
+    component: Symbol,
   },
   {
     path: '/MDN',
