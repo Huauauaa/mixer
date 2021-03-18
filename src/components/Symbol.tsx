@@ -35,6 +35,11 @@ const Symbol = () => {
       en: `''`,
       cn: '“”',
     },
+    {
+      name: '逗号',
+      en: `,`,
+      cn: '，',
+    },
   ].map((item, index) => ({ ...item, key: index }));
 
   return (
