@@ -8,6 +8,7 @@ import JSONFormat from './components/JSONFormat';
 import IntlPanel from './components/IntlPanel';
 import GitGist from './components/GItGist';
 import Symbol from './components/Symbol';
+import ColorFormat from './components/ColorFormat';
 
 const routers = [
   {
@@ -73,6 +74,12 @@ const routers = [
     name: 'Git',
     label: 'Git',
     component: GitGist,
+  },
+  {
+    path: '/tool/color-format',
+    name: 'ColorFormat',
+    label: '颜色格式化',
+    component: ColorFormat,
   },
 ];
 

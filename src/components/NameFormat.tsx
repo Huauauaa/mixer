@@ -4,11 +4,6 @@ import _ from 'lodash';
 import React from 'react';
 import CopyButton from './CopyButton';
 
-type FormatType = {
-  type: string;
-  text: string;
-};
-
 function NameFormat() {
   const [data, setData]: [
     FormatType[],
@@ -59,7 +54,7 @@ function NameFormat() {
       <List
         bordered
         dataSource={data}
-        renderItem={(item) => (
+        renderItem={item => (
           <List.Item style={{ display: 'flex' }}>
             {item.type}: {item.text}
             <CopyButton text={item.text}></CopyButton>
