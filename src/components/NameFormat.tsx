@@ -4,11 +4,6 @@ import _ from 'lodash';
 import React from 'react';
 import CopyButton from './CopyButton';
 
-type FormatType = {
-  type: string;
-  text: string;
-};
-
 function NameFormat() {
   const [input, setInput] = useState('');
   const [data, setData]: [

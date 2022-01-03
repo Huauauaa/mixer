@@ -2,6 +2,7 @@ import Home from './views/Home';
 import Tool from './views/Tool';
 import Timestamp from './components/Timestamp';
 import NameFormat from './components/NameFormat';
+import ColorFormat from './components/ColorFormat';
 
 const routers = [
   {
@@ -29,6 +30,12 @@ const routers = [
     name: 'NameFormat',
     label: '命名格式化',
     component: NameFormat,
+  },
+  {
+    path: '/tool/color-format',
+    name: 'ColorFormat',
+    label: '颜色格式化',
+    component: ColorFormat,
   },
 ];
 
